@@ -5,7 +5,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Configuration de la base de données
 builder.Services.AddDbContext<VoyageContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 // Configuration de CORS
 builder.Services.AddCors(options =>

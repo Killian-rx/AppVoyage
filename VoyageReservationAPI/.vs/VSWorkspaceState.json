@@ -3,9 +3,9 @@
     "",
     "\\Controllers",
     "\\Data",
-    "\\Models",
-    "\\Properties"
+    "\\Migrations",
+    "\\Models"
   ],
-  "SelectedNode": "\\VoyageReservationAPI.http",
+  "SelectedNode": "\\voyages.db",
   "PreviewInSolutionExplorer": false
 }

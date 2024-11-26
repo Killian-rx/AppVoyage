@@ -1,30 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\",
+  "WorkspaceRootPath": "C:\\Users\\killi\\OneDrive - Ynov\\YNOV\\B2\\Cours\\C#\\AppVoyage\\VoyageReservationAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|c:\\users\\killi\\desktop\\voyagereservationapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\killi\\OneDrive - Ynov\\YNOV\\B2\\Cours\\C#\\AppVoyage\\VoyageReservationAPI\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|c:\\users\\killi\\desktop\\voyagereservationapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\killi\\OneDrive - Ynov\\YNOV\\B2\\Cours\\C#\\AppVoyage\\VoyageReservationAPI\\VoyageReservationAPI.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:VoyageReservationAPI.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|c:\\users\\killi\\desktop\\voyagereservationapi\\voyagereservationapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|solutionrelative:voyagereservationapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\killi\\OneDrive - Ynov\\YNOV\\B2\\Cours\\C#\\AppVoyage\\VoyageReservationAPI\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|c:\\users\\killi\\desktop\\voyagereservationapi\\controllers\\voyagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|solutionrelative:controllers\\voyagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\killi\\OneDrive - Ynov\\YNOV\\B2\\Cours\\C#\\AppVoyage\\VoyageReservationAPI\\Models\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|c:\\users\\killi\\desktop\\voyagereservationapi\\data\\voyagecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|solutionrelative:data\\voyagecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\killi\\OneDrive - Ynov\\YNOV\\B2\\Cours\\C#\\AppVoyage\\VoyageReservationAPI\\Data\\VoyageContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\VoyageContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|c:\\users\\killi\\desktop\\voyagereservationapi\\models\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|solutionrelative:models\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\killi\\OneDrive - Ynov\\YNOV\\B2\\Cours\\C#\\AppVoyage\\VoyageReservationAPI\\Controllers\\VoyageController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\VoyageController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,78 +38,73 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "VoyageReservationAPI.http",
-              "DocumentMoniker": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\VoyageReservationAPI.http",
+              "DocumentMoniker": "C:\\Users\\killi\\OneDrive - Ynov\\YNOV\\B2\\Cours\\C#\\AppVoyage\\VoyageReservationAPI\\VoyageReservationAPI.http",
               "RelativeDocumentMoniker": "VoyageReservationAPI.http",
-              "ToolTip": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\VoyageReservationAPI.http",
+              "ToolTip": "C:\\Users\\killi\\OneDrive - Ynov\\YNOV\\B2\\Cours\\C#\\AppVoyage\\VoyageReservationAPI\\VoyageReservationAPI.http",
               "RelativeToolTip": "VoyageReservationAPI.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-11-25T21:32:52.284Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T21:32:52.284Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\killi\\OneDrive - Ynov\\YNOV\\B2\\Cours\\C#\\AppVoyage\\VoyageReservationAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\killi\\OneDrive - Ynov\\YNOV\\B2\\Cours\\C#\\AppVoyage\\VoyageReservationAPI\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAADgvyUAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T20:39:06.581Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T20:39:06.581Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "class.cs",
-              "DocumentMoniker": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\Models\\class.cs",
+              "DocumentMoniker": "C:\\Users\\killi\\OneDrive - Ynov\\YNOV\\B2\\Cours\\C#\\AppVoyage\\VoyageReservationAPI\\Models\\class.cs",
               "RelativeDocumentMoniker": "Models\\class.cs",
-              "ToolTip": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\Models\\class.cs",
+              "ToolTip": "C:\\Users\\killi\\OneDrive - Ynov\\YNOV\\B2\\Cours\\C#\\AppVoyage\\VoyageReservationAPI\\Models\\class.cs",
               "RelativeToolTip": "Models\\class.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T20:33:24.128Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T20:33:24.128Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "VoyageContext.cs",
-              "DocumentMoniker": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\Data\\VoyageContext.cs",
+              "DocumentMoniker": "C:\\Users\\killi\\OneDrive - Ynov\\YNOV\\B2\\Cours\\C#\\AppVoyage\\VoyageReservationAPI\\Data\\VoyageContext.cs",
               "RelativeDocumentMoniker": "Data\\VoyageContext.cs",
-              "ToolTip": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\Data\\VoyageContext.cs",
+              "ToolTip": "C:\\Users\\killi\\OneDrive - Ynov\\YNOV\\B2\\Cours\\C#\\AppVoyage\\VoyageReservationAPI\\Data\\VoyageContext.cs",
               "RelativeToolTip": "Data\\VoyageContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAwA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T20:27:37.145Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T20:27:37.145Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "VoyageController.cs",
-              "DocumentMoniker": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\Controllers\\VoyageController.cs",
+              "DocumentMoniker": "C:\\Users\\killi\\OneDrive - Ynov\\YNOV\\B2\\Cours\\C#\\AppVoyage\\VoyageReservationAPI\\Controllers\\VoyageController.cs",
               "RelativeDocumentMoniker": "Controllers\\VoyageController.cs",
-              "ToolTip": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\Controllers\\VoyageController.cs",
+              "ToolTip": "C:\\Users\\killi\\OneDrive - Ynov\\YNOV\\B2\\Cours\\C#\\AppVoyage\\VoyageReservationAPI\\Controllers\\VoyageController.cs",
               "RelativeToolTip": "Controllers\\VoyageController.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAiwAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T20:25:59.705Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T20:25:59.705Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\killi\\OneDrive - Ynov\\YNOV\\B2\\Cours\\C#\\AppVoyage\\VoyageReservationAPI\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\killi\\OneDrive - Ynov\\YNOV\\B2\\Cours\\C#\\AppVoyage\\VoyageReservationAPI\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-11-25T20:23:05.718Z",
               "EditorCaption": ""
