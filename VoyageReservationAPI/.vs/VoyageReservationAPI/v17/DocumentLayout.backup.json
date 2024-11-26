@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|c:\\users\\killi\\desktop\\voyagereservationapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|c:\\users\\killi\\desktop\\voyagereservationapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|c:\\users\\killi\\desktop\\voyagereservationapi\\voyagereservationapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|solutionrelative:voyagereservationapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|c:\\users\\killi\\desktop\\voyagereservationapi\\controllers\\voyagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|solutionrelative:controllers\\voyagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|c:\\users\\killi\\desktop\\voyagereservationapi\\data\\voyagecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|solutionrelative:data\\voyagecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|c:\\users\\killi\\desktop\\voyagereservationapi\\models\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|VoyageReservationAPI.csproj|solutionrelative:models\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VoyageReservationAPI.http",
+              "DocumentMoniker": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\VoyageReservationAPI.http",
+              "RelativeDocumentMoniker": "VoyageReservationAPI.http",
+              "ToolTip": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\VoyageReservationAPI.http",
+              "RelativeToolTip": "VoyageReservationAPI.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-11-25T21:32:52.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAADgvyUAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T20:39:06.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "class.cs",
+              "DocumentMoniker": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\Models\\class.cs",
+              "RelativeDocumentMoniker": "Models\\class.cs",
+              "ToolTip": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\Models\\class.cs",
+              "RelativeToolTip": "Models\\class.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T20:33:24.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VoyageContext.cs",
+              "DocumentMoniker": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\Data\\VoyageContext.cs",
+              "RelativeDocumentMoniker": "Data\\VoyageContext.cs",
+              "ToolTip": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\Data\\VoyageContext.cs",
+              "RelativeToolTip": "Data\\VoyageContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T20:27:37.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VoyageController.cs",
+              "DocumentMoniker": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\Controllers\\VoyageController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VoyageController.cs",
+              "ToolTip": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\Controllers\\VoyageController.cs",
+              "RelativeToolTip": "Controllers\\VoyageController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAiwAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T20:25:59.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\killi\\Desktop\\VoyageReservationAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-25T20:23:05.718Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

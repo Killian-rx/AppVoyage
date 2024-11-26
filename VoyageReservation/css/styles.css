@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+#voyages-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.voyage {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+}

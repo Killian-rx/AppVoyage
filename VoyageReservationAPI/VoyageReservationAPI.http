@@ -1,0 +1,6 @@
+@VoyageReservationAPI_HostAddress = http://localhost:5074
+
+GET {{VoyageReservationAPI_HostAddress}}/api/voyages/
+Accept: application/json
+
+###
