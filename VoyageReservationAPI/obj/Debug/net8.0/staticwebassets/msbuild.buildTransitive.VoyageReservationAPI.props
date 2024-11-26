@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="..\buildMultiTargeting\VoyageReservationAPI.props" />
+  <Import Project="../buildMultiTargeting/VoyageReservationAPI.props" />
 </Project>

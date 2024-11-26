@@ -1,7 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
+
 #voyages-container {
     display: flex;
     flex-wrap: wrap;
@@ -12,4 +15,90 @@ body {
     border-radius: 5px;
     padding: 10px;
     width: 200px;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #333;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color : white;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+/* Title and Welcome message */
+.welcome-container {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.welcome-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.welcome-container p {
+    font-size: 18px;
+}
+
+/* Card container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card h3 {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin: 0;
+}
+
+.card p {
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Button styling */
+.btn {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* Ensure the button is aligned to the top right */
+.login-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
 }
