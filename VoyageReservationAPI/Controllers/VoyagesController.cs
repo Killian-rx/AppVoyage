@@ -20,11 +20,12 @@ public class VoyagesController : ControllerBase
         return await _context.Voyages.ToListAsync();
     }
 
+
     [HttpPost]
     public async Task<ActionResult<Voyage>> PostVoyage(Voyage voyage)
     {
         _context.Voyages.Add(voyage);
         await _context.SaveChangesAsync();
-        return CreatedAtAction(nameof(GetVoyages), new { id = voyage.VoyageId }, voyage);
+        return CreatedAtAction(nameof(GetVoyages), new { id = voyage.VoyageId }, voyage);  // Fixed reference here
     }
 }

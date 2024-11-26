@@ -1,23 +1,49 @@
-const apiUrl = "http://localhost:5074/api/voyages"; // URL de ton API
+// Function to handle the registration form submission
+async function handleRegister(event) {
+    event.preventDefault(); // Prevent the form from reloading the page
 
-// Fonction pour récupérer les voyages depuis l'API
-async function fetchVoyages() {
+    // Get form data (adjust IDs according to your HTML)
+    const nomUtilisateur = document.getElementById('nomUtilisateur').value;
+    const emailUtilisateur = document.getElementById('emailUtilisateur').value;
+    const motDePasse = document.getElementById('motDePasse').value;
+
+    // Prepare the data to send to the backend
+    const utilisateurData = {
+        nom: nomUtilisateur,       // Match the property name as used in Swagger
+        email: emailUtilisateur,   // Match the property name as used in Swagger
+        motDePasse: motDePasse     // Match the property name as used in Swagger
+    };
+
+    // Log the data being sent to the console (for debugging)
+    console.log('Données envoyées formatées :', JSON.stringify(utilisateurData));
+
+
     try {
-        // Appel de l'API pour récupérer les voyages
-        const response = await fetch(apiUrl);
-        if (!response.ok) {
-            throw new Error("Erreur lors de la récupération des données depuis l'API.");
-        }
+        // Make a POST request to the register endpoint
+        const response = await fetch('http://localhost:5074/api/utilisateurs/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',  // Ensure content-type is set to JSON
+            },
+            body: JSON.stringify(utilisateurData), // 2 ajoute une indentation
 
-        // Convertir les données en JSON
-        const voyages = await response.json();
-        displayVoyages(voyages);
+        });
+
+        // Check if the response is successful
+        if (response.ok) {
+            const result = await response.json();
+            alert(result); // Show success message
+            // Optionally redirect to login page or dashboard
+        } else {
+            const error = await response.json();
+            alert(`Erreur: ${error.errors || error}`); // Show error message from the server
+        }
     } catch (error) {
-        console.error("Erreur:", error.message);
-        // Affichage d'un message d'erreur dans le DOM
-        const container = document.getElementById("voyages-container");
-        container.innerHTML = `<p style="color: red;">Impossible de charger les voyages. Vérifiez votre connexion ou contactez un administrateur.</p>`;
+        console.error('Error:', error);
+        alert('Une erreur est survenue lors de l\'inscription.');
     }
+
+    
 }
 
 // Fonction pour afficher les voyages dans le DOM
