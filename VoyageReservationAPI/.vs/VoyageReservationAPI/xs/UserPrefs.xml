@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{3CF8A4E8-AAD9-4F4C-95EA-C1FABE89CF59}|https">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/VoyageController.cs">
+    <Files>
+      <File FileName="Migrations/VoyageContextModelSnapshot.cs" Line="1" Column="1" />
+      <File FileName="Migrations/20241126102316_InitialCreate.cs" Line="1" Column="1" />
+      <File FileName="Controllers/VoyageController.cs" Line="31" Column="1" />
+      <File FileName="Controllers/WeatherForecastController.cs" Line="1" Column="1" />
+      <File FileName="Data/VoyageContext.cs" Line="15" Column="1" />
+      <File FileName="Models/class.cs" Line="43" Column="1" />
+      <File FileName="VoyageReservationAPI.http" Line="8" Column="1" />
+      <File FileName="Program.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="VoyageReservationAPI">
+            <Node name="VoyageReservationAPI">
+              <Node name="Controllers">
+                <Node name="WeatherForecastController.cs" selected="True" />
+              </Node>
+              <Node name="Data" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.VoyageReservationAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

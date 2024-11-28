@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "D+p0nWwXHgnO5EskdhJTVh2JbLZMt3dobdo8UYjAEyA=",
+  "Source": "VoyageReservationAPI",
+  "BasePath": "_content/VoyageReservationAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
