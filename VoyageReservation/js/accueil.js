@@ -58,3 +58,4 @@ document.addEventListener('DOMContentLoaded', toggleConnexionLink);
 
 // Event listener pour rechercher les voyages à chaque frappe de l'utilisateur
 document.getElementById('rechercheVoyage').addEventListener('input', rechercherVoyages);
+

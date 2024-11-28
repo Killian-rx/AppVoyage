@@ -35,9 +35,9 @@ h1 {
     font-family: 'Nunito';
 }
 
-input {
-    width: 30vw;
-    height: 5vh;
+#rechercheVoyage {
+    width: 35vw;
+    height: 4vh;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -48,9 +48,18 @@ input {
     border: none;
     border-radius: 50px;
     outline: none;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#rechercheVoyage{
+    color: black;
+    padding-left: 1.5vw;
 }
 
 input::placeholder {
-    color: #bdc3c7;
+    color: rgba(0, 0, 0, 0.5);
+}
 
+#rechercheVoyage:focus {
+    background: rgba(255, 255, 255, 0.8);
 }
