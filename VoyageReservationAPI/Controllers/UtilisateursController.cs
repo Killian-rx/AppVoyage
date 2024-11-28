@@ -41,7 +41,8 @@ public class UtilisateursController : ControllerBase
         _context.Utilisateurs.Add(utilisateur);
         await _context.SaveChangesAsync();
 
-        return Ok("Utilisateur enregistré avec succès.");
+        // Renvoyer une réponse en JSON
+        return Ok(new { message = "Utilisateur enregistré avec succès." });
     }
 
     // Méthode de connexion
@@ -59,7 +60,8 @@ public class UtilisateursController : ControllerBase
         if (existingUser == null || !BCrypt.Net.BCrypt.Verify(loginRequest.MotDePasse, existingUser.MotDePasse))
             return Unauthorized("Nom d'utilisateur ou mot de passe invalide.");
 
-        return Ok("Connexion réussie.");
+        // Retourner l'ID utilisateur dans une réponse JSON
+        return Ok(new { utilisateurId = existingUser.UtilisateurId, message = "Connexion réussie." });
     }
 
     // Validation de l'email

@@ -21,5 +21,7 @@ namespace VoyageReservationAPI.Models
         [Required]
         public DateTime DateReservation { get; set; }
 
+        // Utilisateur associé à la réservation
+        public Voyage Voyage { get; set; }
     }
 }

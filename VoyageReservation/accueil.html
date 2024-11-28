@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/accueil.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="accueil.html">Accueil</a>
+        <a href="voyages.html">Voyages</a>
+        <a href="connexion.html">Connexion</a>
+    </nav>
+    <h1>Rechercher des voyages</h1>
+    <div>
+        <label for="rechercheVoyage">Rechercher :</label>
+        <input type="text" id="rechercheVoyage" placeholder="Destination">
+        <button onclick="rechercherVoyages()">Rechercher</button>
+    </div>
+    <ul id="voyagesListe">
+    </ul>
+</body>
+<script src="/js/accueil.js"></script>
+</html>

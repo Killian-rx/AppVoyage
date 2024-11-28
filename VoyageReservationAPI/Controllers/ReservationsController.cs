@@ -113,12 +113,19 @@ public class ReservationsController : ControllerBase
         return NoContent();
     }
 
-    // GET: api/reservations/utilisateur/{utilisateurId}
     [HttpGet("utilisateur/{utilisateurId}")]
-    public async Task<ActionResult<IEnumerable<Reservation>>> GetReservationsByUtilisateur(int utilisateurId)
+    public async Task<IActionResult> GetReservationsByUtilisateur(int utilisateurId)
     {
         var reservations = await _context.Reservations
             .Where(r => r.UtilisateurId == utilisateurId)
+            .Include(r => r.Voyage) // Inclure les informations de Voyage
+            .Select(r => new
+            {
+                Id = r.ReservationId,
+                r.Voyage.VoyageId,
+                DateReservation = r.DateReservation.ToString("yyyy-MM-dd"), // Format de date
+                VoyageNom = r.Voyage.Destination // Remplacer `Nom` par `Destination`
+            })
             .ToListAsync();
 
         if (!reservations.Any())
@@ -126,6 +133,9 @@ public class ReservationsController : ControllerBase
             return NotFound("Aucune réservation trouvée pour cet utilisateur.");
         }
 
-        return reservations;
+        return Ok(reservations);
     }
+
+
+
 }

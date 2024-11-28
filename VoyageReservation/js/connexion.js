@@ -1,56 +1,56 @@
-// Fonction pour gérer la soumission du formulaire de connexion
 async function handleLogin(event) {
     event.preventDefault(); // Empêche la soumission par défaut du formulaire
 
-    // Récupérer les valeurs des champs de formulaire
     const utilisateur = document.getElementById('utilisateur').value;
-    const email = document.getElementById('email').value;
     const motdepasse = document.getElementById('motdepasse').value;
+    const messageDiv = document.getElementById('message');
 
-    // Vérifier si les champs sont remplis
+    messageDiv.textContent = '';
+    messageDiv.style.color = '';
+
     if (!utilisateur || !motdepasse) {
-        alert("Veuillez remplir tous les champs.");
+        messageDiv.textContent = "Veuillez remplir tous les champs.";
+        messageDiv.style.color = "red";
         return;
     }
 
-    // Préparer les données à envoyer à l'API
     const loginData = {
-        nom: utilisateur,      // Utiliser 'nom' au lieu de 'utilisateur' pour correspondre à l'API
+        nom: utilisateur,
         motDePasse: motdepasse,
-        email: email           // Inclure l'email si l'API le demande
     };
 
     try {
-        // Envoi de la requête de connexion à l'API
         const response = await fetch('http://localhost:5074/api/utilisateurs/login', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json', // Indiquer que les données sont envoyées en JSON
+                'Content-Type': 'application/json',
             },
-            body: JSON.stringify(loginData), // Convertir les données en JSON
+            body: JSON.stringify(loginData),
         });
 
-        // Vérifier si la connexion a réussi
-        const responseText = await response.text(); // Récupérer la réponse en texte brut
-        try {
-            const result = JSON.parse(responseText);  // Tenter de parser en JSON
+        if (response.ok) {
+            const { utilisateurId, message } = await response.json(); // Récupérer la réponse JSON
+            messageDiv.textContent = message || "Connexion réussie !";
+            messageDiv.style.color = "green";
 
-            if (response.ok) {
-                alert('Connexion réussie !');
-                window.location.href = '/home'; // Remplacer '/home' par l'URL de la page d'accueil
-            } else {
-                alert(`Erreur : ${result}`);  // Afficher l'erreur retournée par l'API
-            }
-        } catch (error) {
-            console.error('Erreur lors de l\'analyse JSON', error);
-            alert('Une erreur est survenue : ' + responseText);
+            // Stocker l'ID utilisateur
+            localStorage.setItem('utilisateurId', utilisateurId);
+            console.log('ID utilisateur enregistré dans localStorage :', utilisateurId);
+
+            setTimeout(() => {
+                window.location.href = '/voyages.html';
+            }, 2000);
+        } else {
+            const error = await response.text();
+            messageDiv.textContent = `Erreur : ${error}`;
+            messageDiv.style.color = "red";
         }
-
     } catch (error) {
         console.error('Erreur de connexion :', error);
-        alert('Une erreur est survenue lors de la connexion.');
+        messageDiv.textContent = "Une erreur est survenue lors de la connexion.";
+        messageDiv.style.color = "red";
     }
 }
 
-// Ajouter l'écouteur d'événement pour la soumission du formulaire (s'assurer que l'ID correspond à celui du formulaire)
+// Ajouter l'écouteur d'événement pour la soumission du formulaire
 document.getElementById('loginForm').addEventListener('submit', handleLogin);

@@ -9,38 +9,45 @@ async function handleRegister(event) {
 
     // Prepare the data to send to the backend
     const utilisateurData = {
-        nom: nomUtilisateur,       // Match the property name as used in Swagger
-        email: emailUtilisateur,   // Match the property name as used in Swagger
-        motDePasse: motDePasse     // Match the property name as used in Swagger
+        nom: nomUtilisateur,
+        email: emailUtilisateur,
+        motDePasse: motDePasse
     };
 
+    // Select the message element
+    const messageDiv = document.getElementById('message');
+    messageDiv.textContent = ""; // Reset the message content
+    messageDiv.style.color = ""; // Reset the message color
 
     try {
         // Make a POST request to the register endpoint
         const response = await fetch('http://localhost:5074/api/utilisateurs/register', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',  // Ensure content-type is set to JSON
+                'Content-Type': 'application/json', // Ensure content-type is set to JSON
             },
-            body: JSON.stringify(utilisateurData), // 2 ajoute une indentation
-
+            body: JSON.stringify(utilisateurData),
         });
 
         // Check if the response is successful
         if (response.ok) {
-            const result = await response.json();
-            alert(result); // Show success message
-            // Optionally redirect to login page or dashboard
+            const { message } = await response.json(); // Extract the message from the JSON response
+            messageDiv.textContent = message; // Display the success message
+            messageDiv.style.color = "green"; // Set the text color to green
+            // Optionally redirect after a delay
+            setTimeout(() => {
+                window.location.href = '/connexion.html'; // Adjust the URL as needed
+            }, 2000);
         } else {
-            const error = await response.json();
-            alert(`Erreur: ${error.errors || error}`); // Show error message from the server
+            const { error } = await response.json(); // Extract the error message from the JSON response
+            messageDiv.textContent = `Erreur: ${error}`; // Display the error message
+            messageDiv.style.color = "red"; // Set the text color to red
         }
     } catch (error) {
         console.error('Error:', error);
-        alert('Une erreur est survenue lors de l\'inscription.');
+        messageDiv.textContent = "Une erreur est survenue lors de l'inscription.";
+        messageDiv.style.color = "red";
     }
-
-    
 }
 
 // Attach event listener to the form submission (adjust ID according to your form)

@@ -20,6 +20,34 @@ public class VoyagesController : ControllerBase
         return await _context.Voyages.ToListAsync();
     }
 
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Voyage>> GetVoyage(int id)
+    {
+        var voyage = await _context.Voyages.FindAsync(id);
+
+        if (voyage == null)
+        {
+            return NotFound();
+        }
+
+        return voyage;
+    }
+
+    [HttpGet("recherche")]
+public async Task<IActionResult> RechercheVoyages(string query)
+{
+    var voyages = _context.Voyages.AsQueryable();
+
+    if (!string.IsNullOrEmpty(query))
+    {
+        voyages = voyages.Where(v => v.Destination.Contains(query));
+    }
+
+    var resultats = await voyages.ToListAsync();
+    return Ok(resultats);
+}
+
+
 
     [HttpPost]
     public async Task<ActionResult<Voyage>> PostVoyage(Voyage voyage)
