@@ -37,11 +37,10 @@ public class ReservationsController : ControllerBase
         return reservation;
     }
 
-    // POST: api/reservations
     [HttpPost]
     public async Task<ActionResult<Reservation>> CreateReservation(Reservation reservation)
     {
-        // Validation si l'utilisateur ou le voyage n'existe pas
+        // Vérification si l'utilisateur et le voyage existent
         var utilisateur = await _context.Utilisateurs.FindAsync(reservation.UtilisateurId);
         var voyage = await _context.Voyages.FindAsync(reservation.VoyageId);
 
@@ -55,12 +54,17 @@ public class ReservationsController : ControllerBase
             return BadRequest("Voyage non trouvé.");
         }
 
-        reservation.DateReservation = DateTime.UtcNow; // Définit la date de réservation
+        // Ajouter le voyage à la réservation pour que les détails soient envoyés dans la réponse
+        reservation.Voyage = voyage;
+        reservation.DateReservation = DateTime.UtcNow;
+
         _context.Reservations.Add(reservation);
         await _context.SaveChangesAsync();
 
+        // Retourner la réservation créée
         return CreatedAtAction(nameof(GetReservation), new { id = reservation.ReservationId }, reservation);
     }
+
 
     // PUT: api/reservations/{id}
     [HttpPut("{id}")]
