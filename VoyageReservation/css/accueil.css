@@ -48,7 +48,7 @@ h1 {
     border: none;
     border-radius: 50px;
     outline: none;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.6);
 }
 
 #rechercheVoyage{
@@ -62,4 +62,12 @@ input::placeholder {
 
 #rechercheVoyage:focus {
     background: rgba(255, 255, 255, 0.8);
+}
+
+footer {
+    margin: auto;
+    color: white;
+    text-align: center;
+    margin-top: 50vh;
+    width: 40%;
 }
