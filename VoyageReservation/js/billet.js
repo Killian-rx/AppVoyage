@@ -1,31 +1,30 @@
 async function afficherDetailsVoyage() {
-    // Récupérer l'ID du voyage à partir de l'URL (paramètre 'voyageId')
+    // Récupérer l'ID du voyage à partir de l'URL
     const urlParams = new URLSearchParams(window.location.search);
-    const voyageId = urlParams.get('voyageId'); // Récupère le paramètre 'voyageId' de l'URL
+    const voyageId = urlParams.get('voyageId');
 
     if (!voyageId) {
         console.error("L'ID du voyage n'est pas défini dans l'URL.");
-        return; // Si l'ID n'est pas présent, on arrête l'exécution de la fonction
+        return;
     }
 
-    console.log("Voyage ID récupéré:", voyageId); // Vérification de l'ID
+    console.log("Voyage ID récupéré:", voyageId);
 
     try {
+        // Appeler l'API pour récupérer les détails du voyage
         const response = await fetch(`http://localhost:5074/api/voyages/${voyageId}`);
         const voyage = await response.json();
-        console.log('Détails du voyage :', voyage); // Log des détails pour vérifier la structure
-        
+
         if (response.ok) {
-            // Affichage des détails du voyage dans le DOM
             document.getElementById('destination').textContent = voyage.destination;
             document.getElementById('prix').textContent = `${voyage.prix} €`;
             document.getElementById('dateDepart').textContent = reformaterDate(voyage.dateDepart);
             document.getElementById('dateRetour').textContent = reformaterDate(voyage.dateRetour);
 
-            // Vérifier si l'utilisateur est connecté et afficher le bouton ou le message
-            afficherBoutonReservation();
+            // Vérifie si l'utilisateur a déjà réservé ce voyage
+            await verifierReservation(voyageId);
         } else {
-            console.log('Erreur API:', voyage);
+            console.error('Erreur API:', voyage);
         }
     } catch (error) {
         console.error('Erreur lors du chargement des informations du voyage :', error);
@@ -46,6 +45,41 @@ function afficherBoutonReservation() {
         // Si l'utilisateur n'est pas connecté, afficher le message pour se connecter
         boutonReservation.style.display = 'none';
         messageConnexion.style.display = 'block';
+    }
+}
+
+async function verifierReservation(voyageId) {
+    const utilisateurId = localStorage.getItem('utilisateurId');
+    const boutonReservation = document.getElementById('boutonReservation');
+    const messageConnexion = document.getElementById('messageConnexion');
+
+    if (!utilisateurId) {
+        // Si l'utilisateur n'est pas connecté
+        boutonReservation.style.display = 'none';
+        messageConnexion.style.display = 'block';
+        return;
+    }
+
+    try {
+        // Appel à l'API pour vérifier si l'utilisateur a déjà réservé ce voyage
+        const response = await fetch(`http://localhost:5074/api/reservations?utilisateurId=${utilisateurId}&voyageId=${voyageId}`);
+        const reservations = await response.json();
+
+        if (reservations.length > 0) {
+            // Si une réservation existe, cacher le bouton et afficher un message
+            boutonReservation.style.display = 'none';
+            messageConnexion.style.display = 'block';
+            messageConnexion.textContent = "Vous avez déjà réservé ce voyage.";
+        } else {
+            // Sinon, afficher le bouton de réservation
+            boutonReservation.style.display = 'block';
+            messageConnexion.style.display = 'none';
+        }
+    } catch (error) {
+        console.error("Erreur lors de la vérification de la réservation :", error);
+        boutonReservation.style.display = 'none';
+        messageConnexion.style.display = 'block';
+        messageConnexion.textContent = "Erreur lors de la vérification de votre réservation.";
     }
 }
 
