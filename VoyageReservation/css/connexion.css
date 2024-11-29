@@ -1,5 +1,5 @@
 body{
-    background-image: url(/images/pexels-raulling-29532225.jpg);
+    background-image: url(/images/pexels-ahmetyuksek-29564375.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -78,6 +78,7 @@ nav a:hover {
     display: flex;
     position: relative;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .form-container {
@@ -102,12 +103,13 @@ nav a:hover {
 #slider-overlay {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 50%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background: radial-gradient(circle at 10% 20%, rgb(255, 131, 61) 0%, rgb(249, 183, 23) 90%);
     z-index: 2; /* Assurez-vous que l'overlay soit au-dessus des formulaires */
-    transition: left 0.3s ease; /* Transition sur la propriété left */
+    transition: right 0.3s ease; /* Transition sur la propriété left */
+    border-radius: 10px;
 }
 
 /* Bouton et autres styles comme précédemment */

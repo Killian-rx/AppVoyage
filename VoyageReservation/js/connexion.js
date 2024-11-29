@@ -112,11 +112,11 @@ document.getElementById('registerForm').addEventListener('submit', handleRegiste
 
 function SlideToLeft(){
     const slider = document.getElementById('slider-overlay');
-    slider.style.left = "0";
+    slider.style.right = "50%";
 }
 
 function SlideToRight(){
     const slider = document.getElementById('slider-overlay');
-    slider.style.left = "50%";
+    slider.style.right = "0";
 }
 
