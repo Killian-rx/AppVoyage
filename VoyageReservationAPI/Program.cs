@@ -27,6 +27,8 @@ var app = builder.Build();
 // Utilisation de CORS
 app.UseCors("AllowAllOrigins");
 
+app.UseStaticFiles();
+
 // Middleware
 app.UseHttpsRedirection();
 app.UseAuthorization();
