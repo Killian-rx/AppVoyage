@@ -4,41 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/connexion.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Page de Connexion</title>
 
 </head>
 <body>
     <nav>
-        <a href="accueil.html" class="logo">VoyageAPP</a>
         <a href="voyages.html" class="link">Destinations</a>
         <a href="reservations.html" class="link">Mes réservations</a>
-        <a id="login-link" href="connexion.html" class="link">Connexion</a>
+        <a id="login-link" href="connexion.html">Connexion</a>
     </nav>
 
     <div class="container">
-        <div class="left">
+        <div class="form-container" id="connexion">
+            <div class="form-content">
+                <h1>Connexion</h1>
+                <form id="loginForm" action="/connexion">
+                    <div>
+                        <input type="text" id="utilisateur" name="utilisateur" required placeholder="Nom d'utilisateur">
+                    </div>
+                    <div>
+                        <input type="password" id="motdepasse" name="motdepasse" required placeholder="Mot de passe">
+                    </div>
+                    <div>
+                        <button type="submit">Se connecter</button>
+                    </div>
+                    <hr class="separator"> 
+                </form>
+                <p>Pas encore inscrit ? <a href="#" id="showRegister" onclick="SlideToLeft()" >Créer un compte</a></p>
+                <p id="message"></p>
+            </div>
         </div>
-        <div class="right">
-            <h1>Connexion</h1>
-            <form id="loginForm" action="/connexion">
-                <div>
-                    <input type="text" id="utilisateur" name="utilisateur" required>
-                </div>
-                <div>
-                    <input type="password" id="motdepasse" name="motdepasse" required>
-                </div>
-                <div>
-                    <button type="submit">Se connecter</button>
-                </div>
-                <hr class="separator"> 
-            </form>
-            <p>Pas encore inscrit ? <a href="/register.html">Créer un compte</a></p>
+    
+        <div class="form-container" id="inscription">
+            <div class="form-content">
+                <h1>Inscription</h1>
+                <form id="registerForm">
+                    <div>
+                        <input type="text" id="Utilisateur" name="utilisateur" required placeholder="Nom d'utilisateur">
+                    </div>
+                    <div>
+                        <input type="email" id="Email" name="email" required placeholder="Email">
+                    </div>
+                    <div>
+                        <input type="password" id="Motdepasse" name="motdepasse" required placeholder="Mot de passe">
+                    </div>
+                    <div>
+                        <button type="submit">S'inscrire</button>
+                    </div>
+                    <hr class="separator">
+                </form>
+                <p>Vous avez déjà un compte ? <a href="#" id="showLogin" onclick="SlideToRight()" >Se connecter</a></p> 
+                <p id="Message"></p>
+            </div>
         </div>
+    
+        <!-- Fenêtre noire qui se déplace pour cacher un formulaire et afficher l'autre -->
+        <div id="slider-overlay"></div>
     </div>
     
-    <p id="message"></p>
+    
+    
 
-    <!-- Inclure le script JavaScript -->
     <script src="/js/connexion.js"></script>
 
 </body>

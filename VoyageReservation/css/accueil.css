@@ -5,6 +5,7 @@ body{
     background-attachment: fixed;
     font-family: 'Nunito';
 }
+
 nav {
     text-align: center;
     align-items: center;
@@ -12,10 +13,6 @@ nav {
     width: 28vw;
     margin: auto;
     border-radius: 30px;
-}
-
-.logo {
-    margin-right: 50vw;
 }
 
 nav a {
