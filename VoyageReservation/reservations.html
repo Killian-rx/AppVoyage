@@ -7,11 +7,19 @@
     <title>Mes Réservations</title>
 </head>
 <body>
-    <a href="/voyages.html"> Nouvelle réservation</a>
+    <nav>
+        <a href="voyages.html" class="link">Destinations</a>
+        <a href="reservations.html" class="link">Mes réservations</a>
+        <a id="login-link" href="connexion.html">Connexion</a>
+    </nav>
+    
     <div class="reservations">
-        <ul id="reservationsListe">
-        </ul>
+        <h2>Mes Réservations</h2>
+        <div id="reservationsListe">
+            <!-- Les réservations seront ajoutées ici dynamiquement -->
+        </div>
     </div>
+
     <script src="/js/reservations.js"></script>
 </body>
 </html>
