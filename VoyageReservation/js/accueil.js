@@ -53,6 +53,44 @@ function toggleConnexionLink() {
     }
 }
 
+document.getElementById('rechercheVoyage').addEventListener('focus', function () {
+    const input = this;
+    const placeholderText = input.getAttribute('data-placeholder');
+    let currentIndex = 0;
+
+    // Efface le placeholder pour débuter l'animation
+    input.setAttribute('placeholder', '');
+
+    // Fonction pour ajouter un caractère à la fois
+    const typePlaceholder = () => {
+        if (currentIndex < placeholderText.length) {
+            input.setAttribute(
+                'placeholder',
+                input.getAttribute('placeholder') + placeholderText[currentIndex]
+            );
+            currentIndex++;
+            setTimeout(typePlaceholder, 100); // Ajuste la vitesse ici
+        }
+    };
+
+    typePlaceholder(); // Lance l'animation
+});
+
+document.getElementById('rechercheVoyage').addEventListener('blur', function () {
+    const input = this;
+    const placeholderText = input.getAttribute('data-placeholder');
+
+    // Rétablit le placeholder complet quand on sort du focus
+    input.setAttribute('placeholder', placeholderText);
+});
+
+// Met le focus sur l'input de recherche quand la page est chargée
+window.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('rechercheVoyage').focus();
+});
+
+
+
 // Appeler cette fonction au chargement de la page pour afficher le bon lien
 document.addEventListener('DOMContentLoaded', toggleConnexionLink);
 

@@ -8,18 +8,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <nav>
-        <a href="accueil.html" class="logo">VoyageAPP</a>
         <a href="voyages.html" class="link">Destinations</a>
         <a href="reservations.html" class="link">Mes réservations</a>
-        <a id="login-link" href="connexion.html" class="link">Connexion</a>
+        <a id="login-link" href="connexion.html">Connexion</a>
     </nav>
+    
 
     <h1>Choisissez votre prochaine destination.</h1>
 
-    <input type="text" id="rechercheVoyage" placeholder="ex : Helsinki">
+
+    <i class='bx bx-search'></i>
+    <input type="text" id="rechercheVoyage" placeholder="Par exemple : Helsinki" data-placeholder="Par exemple : Madrid">
+
 
     <ul id="voyagesListe">
         <!-- Les voyages seront affichés ici -->

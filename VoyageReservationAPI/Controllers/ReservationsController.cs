@@ -16,11 +16,15 @@ public class ReservationsController : ControllerBase
 
     // GET: api/reservations
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Reservation>>> GetReservations()
+    public IActionResult GetReservations(int utilisateurId, int voyageId)
     {
-        return await _context.Reservations
-            .ToListAsync();
+        var reservations = _context.Reservations
+            .Where(r => r.UtilisateurId == utilisateurId && r.VoyageId == voyageId)
+            .ToList();
+
+        return Ok(reservations);
     }
+
 
     // GET: api/reservations/{id}
     [HttpGet("{id}")]
