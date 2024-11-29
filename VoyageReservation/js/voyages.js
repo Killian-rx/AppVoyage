@@ -28,15 +28,17 @@ function displayVoyages(voyages) {
         const voyageElement = document.createElement("div");
         voyageElement.classList.add("voyage");
 
-        // Rendre la carte cliquable
-        voyageElement.setAttribute("data-voyage-id", voyage.VoyageId); // Stocker l'ID dans un attribut
+        // Assurer que l'ID du voyage est bien récupéré ici
+        const voyageId = voyage.voyageId; // Assure-toi que c'est bien VoyageId et non voyageId
+        console.log("VoyageId récupéré:", voyageId); // Vérification dans la console
+
+        // Rendre la carte cliquable et utiliser l'ID du voyage
+        voyageElement.setAttribute("data-voyage-id", voyageId); // Stocker l'ID dans un attribut
         voyageElement.onclick = function () {
             const id = this.getAttribute("data-voyage-id"); // Récupérer l'ID depuis l'attribut
             if (id) {
-                // Redirection vers la page billet.html avec le VoyageId
-                window.location.href = `/billet.html?voyageId=${id}`;
-            } else {
-                console.error("VoyageId introuvable pour cet élément.");
+                console.log("VoyageId passé dans l'URL:", id); // Vérification de l'ID avant la redirection
+                window.location.href = `/billet.html?voyageId=${id}`; // Rediriger vers la page billet avec l'ID du voyage
             }
         };
 
