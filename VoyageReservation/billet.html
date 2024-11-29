@@ -4,22 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Détails du voyage</title>
+    <link rel="stylesheet" href="/css/billet.css">
 </head>
 <body>
-    <h1>Détails du voyage</h1>
-
+    <nav>
+        <a href="voyages.html" class="link">Destinations</a>
+        <a href="reservations.html" class="link">Mes réservations</a>
+        <a id="login-link" href="connexion.html">Connexion</a>
+    </nav>
     <div id="voyageDetails">
-        <h2 id="destination"></h2>
-        <p><strong>Prix :</strong> <span id="prix"></span></p>
-        <p><strong>Date de départ :</strong> <span id="dateDepart"></span></p>
-        <p><strong>Date de retour :</strong> <span id="dateRetour"></span></p>
+        <div id="container">
+
+            <div class="corner top-left">
+                <h2 id="destination"></h2>
+                <div class="info">
+                    <span id="prix"></span>
+                </div>
+            </div>
+    
+            <div class="corner top-right">
+                <p>Image de la ville</p>
+            </div>
+    
+            <div class="corner bottom-left">
+                <p><strong>Date de départ</strong></p>
+                <div class="info">
+                    <span id="dateDepart"></span>
+                </div>
+            </div>
+    
+            <div class="corner bottom-right">
+                <p><strong>Date de retour</strong></p>
+                <div class="info">
+                    <span id="dateRetour"></span>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Bouton de réservation affiché si l'utilisateur est connecté -->
-    <button id="boutonReservation">Réserver</button>
-
-    <!-- Message à afficher si l'utilisateur n'est pas connecté -->
-    <p id="messageConnexion" style="display: none;">Pour réserver, connectez-vous.</p>
+    <!-- Bouton centré sous les deux sections -->
+    <div class="reservationContainer">
+        <button id="boutonReservation">Réserver</button>
+        <p id="messageConnexion" style="display: none;">Pour réserver, connectez-vous.</p>
+    </div>
 
     <script src="/js/billet.js"></script>
 </body>
