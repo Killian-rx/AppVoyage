@@ -24,40 +24,31 @@ function displayVoyages(voyages) {
     const container = document.getElementById("voyages-container");
     container.innerHTML = "";
 
-    const isUserConnected = localStorage.getItem("utilisateurId") !== null;
-
     voyages.forEach((voyage) => {
         const voyageElement = document.createElement("div");
         voyageElement.classList.add("voyage");
-    
-        const dateDepart = new Date(voyage.dateDepart).toLocaleDateString("fr-FR");
-        const dateRetour = new Date(voyage.dateRetour).toLocaleDateString("fr-FR");
-    
-        voyageElement.innerHTML = `
-            <h3>${voyage.destination}</h3>
-            <p><strong>Date de départ :</strong> ${dateDepart}</p>
-            <p><strong>Date de retour :</strong> ${dateRetour}</p>
-            <p><strong>Prix :</strong> ${voyage.prix.toFixed(2)} €</p>
-        `;
-    
-        const actionContainer = document.createElement("div");
-    
-        const reserveButton = document.createElement("button");
-        reserveButton.textContent = "Réserver";
-        reserveButton.setAttribute("data-voyage-id", voyage.VoyageId); // Stockage dans un attribut
-        reserveButton.onclick = function() {
-            const id = this.getAttribute("data-voyage-id"); // Récupération de l'ID
-            console.log("Bouton cliqué avec l'ID :", id);
-            reserverVoyage(id);
+
+        // Rendre la carte cliquable
+        voyageElement.setAttribute("data-voyage-id", voyage.VoyageId); // Stocker l'ID dans un attribut
+        voyageElement.onclick = function () {
+            const id = this.getAttribute("data-voyage-id"); // Récupérer l'ID depuis l'attribut
+            if (id) {
+                // Redirection vers la page billet.html avec le VoyageId
+                window.location.href = `/billet.html?voyageId=${id}`;
+            } else {
+                console.error("VoyageId introuvable pour cet élément.");
+            }
         };
-        actionContainer.appendChild(reserveButton);
-    
-        voyageElement.appendChild(actionContainer);
+
+        // Contenu de la carte
+        voyageElement.innerHTML = `
+            <img src="${voyage.image || '/images/default-image.jpg'}" alt="${voyage.destination}">
+            <span>${voyage.destination}</span>
+        `;
+
         container.appendChild(voyageElement);
     });
-    
 }
-
 
 function reserverVoyage(voyageId) {
     console.log("Voyage ID reçu :", voyageId); // Vérifie que l'ID est bien transmis ici
