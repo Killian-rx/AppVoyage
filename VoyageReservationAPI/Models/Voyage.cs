@@ -24,5 +24,7 @@ namespace VoyageReservationAPI.Models
         // Prix du voyage
         [Required]
         public decimal Prix { get; set; }
+
+        public string ImagePath { get; set; }
     }
 }

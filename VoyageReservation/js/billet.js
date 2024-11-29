@@ -16,10 +16,25 @@ async function afficherDetailsVoyage() {
         const voyage = await response.json();
 
         if (response.ok) {
+            // Mettre à jour les détails du voyage dans le DOM
             document.getElementById('destination').textContent = voyage.destination;
             document.getElementById('prix').textContent = `${voyage.prix} €`;
             document.getElementById('dateDepart').textContent = reformaterDate(voyage.dateDepart);
             document.getElementById('dateRetour').textContent = reformaterDate(voyage.dateRetour);
+            
+            // Mettre à jour l'image
+            // Transforme la destination en un format adapté aux noms de fichiers
+            const destination = voyage.destination.toLowerCase().replace(/ /g, '_');
+
+            const imageElement = document.getElementById('image').src = `http://localhost:5074/images/voyages/${destination}.jpg`;
+
+            if (voyage.imagePath) {
+                imageElement.src = voyage.imagePath;    
+                imageElement.alt = `Image de ${voyage.destination}`;
+            } else {
+                imageElement.alt = "Image non disponible";
+                imageElement.style.display = "none"; // Cacher l'image si elle n'est pas disponible
+            }
 
             // Vérifie si l'utilisateur a déjà réservé ce voyage
             await verifierReservation(voyageId);
@@ -30,6 +45,13 @@ async function afficherDetailsVoyage() {
         console.error('Erreur lors du chargement des informations du voyage :', error);
     }
 }
+
+// Fonction pour reformater une date
+function reformaterDate(dateString) {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(dateString).toLocaleDateString('fr-FR', options);
+}
+
 
 // Fonction pour afficher ou masquer le bouton de réservation en fonction de la connexion
 function afficherBoutonReservation() {
@@ -134,7 +156,8 @@ async function ajouterReservation() {
             Destination: voyageDetails.destination,
             DateDepart: voyageDetails.dateDepart,
             DateRetour: voyageDetails.dateRetour,
-            Prix: voyageDetails.prix
+            Prix: voyageDetails.prix,
+            ImagePath: voyageDetails.imagePath
         }
     };
 

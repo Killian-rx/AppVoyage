@@ -34,8 +34,6 @@ namespace VoyageReservationAPI.Migrations
 
                     b.HasKey("ReservationId");
 
-                    b.HasIndex("UtilisateurId");
-
                     b.HasIndex("VoyageId");
 
                     b.ToTable("Reservations");
@@ -53,12 +51,10 @@ namespace VoyageReservationAPI.Migrations
 
                     b.Property<string>("MotDePasse")
                         .IsRequired()
-                        .HasMaxLength(100)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Nom")
                         .IsRequired()
-                        .HasMaxLength(100)
                         .HasColumnType("TEXT");
 
                     b.HasKey("UtilisateurId");
@@ -82,6 +78,10 @@ namespace VoyageReservationAPI.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<decimal>("Prix")
                         .HasColumnType("TEXT");
 
@@ -92,19 +92,11 @@ namespace VoyageReservationAPI.Migrations
 
             modelBuilder.Entity("VoyageReservationAPI.Models.Reservation", b =>
                 {
-                    b.HasOne("VoyageReservationAPI.Models.Utilisateur", "Utilisateur")
-                        .WithMany()
-                        .HasForeignKey("UtilisateurId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("VoyageReservationAPI.Models.Voyage", "Voyage")
                         .WithMany()
                         .HasForeignKey("VoyageId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Utilisateur");
 
                     b.Navigation("Voyage");
                 });

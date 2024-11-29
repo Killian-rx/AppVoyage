@@ -1,26 +1,23 @@
 const apiUrl = "http://localhost:5074/api/voyages";
 
-// Fonction pour récupérer les voyages depuis l'API
+// Fonction pour récupérer les voyages depuis l'API et les afficher sur la page
 async function fetchVoyages() {
     try {
-        // Appel de l'API pour récupérer les voyages
         const response = await fetch(apiUrl);
         if (!response.ok) {
             throw new Error("Erreur lors de la récupération des données depuis l'API.");
         }
 
-        // Convertir les données en JSON
         const voyages = await response.json();
         displayVoyages(voyages);
     } catch (error) {
         console.error("Erreur:", error.message);
-        // Affichage d'un message d'erreur dans le DOM
         const container = document.getElementById("voyages-container");
         container.innerHTML = `<p style="color: red;">Impossible de charger les voyages. Vérifiez votre connexion ou contactez un administrateur.</p>`;
     }
 }
 
-function displayVoyages(voyages) {
+async function displayVoyages(voyages) {
     const container = document.getElementById("voyages-container");
     container.innerHTML = "";
 
@@ -28,29 +25,41 @@ function displayVoyages(voyages) {
         const voyageElement = document.createElement("div");
         voyageElement.classList.add("voyage");
 
-        // Assurer que l'ID du voyage est bien récupéré ici
-        const voyageId = voyage.voyageId; // Assure-toi que c'est bien VoyageId et non voyageId
-        console.log("VoyageId récupéré:", voyageId); // Vérification dans la console
+        const destinationElement = document.createElement("h3");
+        destinationElement.textContent = voyage.destination;
 
-        // Rendre la carte cliquable et utiliser l'ID du voyage
-        voyageElement.setAttribute("data-voyage-id", voyageId); // Stocker l'ID dans un attribut
-        voyageElement.onclick = function () {
-            const id = this.getAttribute("data-voyage-id"); // Récupérer l'ID depuis l'attribut
-            if (id) {
-                console.log("VoyageId passé dans l'URL:", id); // Vérification de l'ID avant la redirection
-                window.location.href = `/billet.html?voyageId=${id}`; // Rediriger vers la page billet avec l'ID du voyage
-            }
-        };
+        const voyageId = voyage.voyageId;
+        console.log("VoyageId récupéré:", voyageId);
 
-        // Contenu de la carte
-        voyageElement.innerHTML = `
-            <img src="${voyage.image || '/images/default-image.jpg'}" alt="${voyage.destination}">
-            <span>${voyage.destination}</span>
-        `;
+        const imageElement = document.createElement("img");
+        imageElement.alt = `Image de ${voyage.destination}`;
+
+        const destinationImagePath = voyage.destination.toLowerCase().replace(/ /g, '_');
+        const imagePath = `http://localhost:5074/images/voyages/${destinationImagePath}.jpg`;
+
+        imageElement.src = voyage.imagePath || imagePath;
+
+        voyageElement.appendChild(destinationElement);
+        voyageElement.appendChild(imageElement);
 
         container.appendChild(voyageElement);
+
+        voyageElement.setAttribute("data-voyage-id", voyageId);
+        voyageElement.onclick = function () {
+            const id = this.getAttribute("data-voyage-id");
+            if (id) {
+                console.log("VoyageId passé dans l'URL:", id);
+                window.location.href = `/billet.html?voyageId=${id}`;
+            }
+        };
     });
 }
+
+// Appeler cette fonction au chargement de la page
+document.addEventListener("DOMContentLoaded", fetchVoyages);
+
+
+
 
 function reserverVoyage(voyageId) {
     console.log("Voyage ID reçu :", voyageId); // Vérifie que l'ID est bien transmis ici

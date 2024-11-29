@@ -30,8 +30,21 @@ public class VoyagesController : ControllerBase
             return NotFound();
         }
 
-        return voyage;
+        // Construire le chemin de l'image en fonction de la destination
+        string imagePath = $"/images/voyages/{voyage.Destination.ToLower()}.jpg";
+
+        // Retourner le voyage avec le chemin de l'image
+        return Ok(new
+        {
+            voyage.VoyageId,
+            voyage.Destination,
+            voyage.DateDepart,
+            voyage.DateRetour,
+            voyage.Prix,
+            ImagePath = imagePath // Ajouter le chemin de l'image
+        });
     }
+
 
     [HttpGet("recherche")]
 public async Task<IActionResult> RechercheVoyages(string query)
