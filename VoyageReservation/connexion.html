@@ -3,28 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/connexion.css">
     <title>Page de Connexion</title>
+
 </head>
 <body>
-    <h1>Se connecter à VoyageAPP</h1>
+    <nav>
+        <a href="accueil.html" class="logo">VoyageAPP</a>
+        <a href="voyages.html" class="link">Destinations</a>
+        <a href="reservations.html" class="link">Mes réservations</a>
+        <a id="login-link" href="connexion.html" class="link">Connexion</a>
+    </nav>
 
-    <form id="loginForm" action="/connexion">
-        <div>
-            <label for="utilisateur">Nom d'utilisateur :</label>
-            <input type="text" id="utilisateur" name="utilisateur" required>
+    <div class="container">
+        <div class="left">
         </div>
-        <div>
-            <label for="motdepasse">Mot de passe :</label>
-            <input type="password" id="motdepasse" name="motdepasse" required>
+        <div class="right">
+            <h1>Connexion</h1>
+            <form id="loginForm" action="/connexion">
+                <div>
+                    <input type="text" id="utilisateur" name="utilisateur" required>
+                </div>
+                <div>
+                    <input type="password" id="motdepasse" name="motdepasse" required>
+                </div>
+                <div>
+                    <button type="submit">Se connecter</button>
+                </div>
+                <hr class="separator"> 
+            </form>
+            <p>Pas encore inscrit ? <a href="/register.html">Créer un compte</a></p>
         </div>
-        <div>
-            <button type="submit">Se connecter</button>
-        </div>
-    </form>
-
+    </div>
+    
     <p id="message"></p>
-
-    <p>Pas encore inscrit ? <a href="/register.html">Créer un compte</a></p>
 
     <!-- Inclure le script JavaScript -->
     <script src="/js/connexion.js"></script>

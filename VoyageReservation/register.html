@@ -3,23 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/css/register.css">
     <title>Inscription et Connexion</title>
 </head>
 <body>
-    <h1>Inscription</h1>
-    <form id="registerForm">
-        <label for="nomUtilisateur">Nom d'utilisateur:</label>
-        <input type="text" id="nomUtilisateur" name="nomUtilisateur" required>
-        
-        <label for="emailUtilisateur">Email:</label>
-        <input type="email" id="emailUtilisateur" name="emailUtilisateur" required>
-        
-        <label for="motDePasse">Mot de passe:</label>
-        <input type="password" id="motDePasse" name="motDePasse" required>
-        
-        <button type="submit">S'inscrire</button>
-    </form>
+    <nav>
+        <a href="accueil.html" class="logo">VoyageAPP</a>
+        <a href="voyages.html" class="link">Destinations</a>
+        <a href="reservations.html" class="link">Mes réservations</a>
+        <a id="login-link" href="connexion.html" class="link">Connexion</a>
+    </nav>
+
+    <div class="container">
+        <div class="left">
+        </div>
+        <div class="right">
+            <h1>Inscription</h1>
+            <form id="registerForm">
+                <div>
+                    <input type="text" id="utilisateur" name="utilisateur" required>
+                </div>
+                <div>
+                    <input type="password" id="email" name="motdepasse" required>
+                </div>
+                <div>
+                    <input type="password" id="motdepasse" name="motdepasse" required>
+                </div>
+                <div>
+                    <button type="submit">S'inscrire</button>
+                </div>
+                <hr class="separator"> 
+            </form>
+        </div>
+    </div>
 
     <p id="message"></p>
     
