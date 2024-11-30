@@ -70,8 +70,8 @@ h1 {
 }
 
 #rechercheVoyage:focus::placeholder {
-    color: rgba(0, 0, 0, 0.5); /* Optionnel : atténue la couleur */
-    transition: color 0.3s ease; /* Animation de la couleur */
+    color: rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease;
 }
 
 
@@ -121,3 +121,47 @@ footer {
     margin-top: 52vh;
     width: 40%;
 }
+
+
+
+/* Suggestion de la barre de recherche */
+#voyagesListe {
+    position: absolute;
+    top: calc(50% + 5vh);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35vw;
+    z-index: 1000;
+    padding: 10px;
+    max-height: 300px;
+    color: white;
+    border-radius: 4px;
+    overflow-y: auto;
+}
+
+#voyagesListe li {
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+#voyagesListe li:last-child {
+    border-bottom: none;
+}
+
+#voyagesListe li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+#voyagesListe li a h3,
+#voyagesListe li a p {
+    margin: 5px 0;
+    color: white;
+}
+
+
+
+

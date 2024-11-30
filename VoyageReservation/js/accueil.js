@@ -1,23 +1,42 @@
+// Fonction pour transformer la première lettre en majuscule
+function capitalizeFirstLetter(str) {
+    if (!str) return '';
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+}
+
 // Fonction pour récupérer les voyages depuis l'API
 async function rechercherVoyages() {
-    const searchQuery = document.getElementById('rechercheVoyage').value;
+    let searchQuery = document.getElementById('rechercheVoyage').value;
 
-    // Envoi de la requête de recherche au back-end
-    const response = await fetch(`http://localhost:5074/api/voyages/recherche?query=${searchQuery}`);
-    const voyages = await response.json();
+    searchQuery = capitalizeFirstLetter(searchQuery);
 
-    afficherVoyages(voyages);
+    console.log('Requête utilisateur normalisée :', searchQuery);
+
+    try {
+        const response = await fetch(`http://localhost:5074/api/voyages/recherche?query=${searchQuery}`);
+        
+        if (!response.ok) {
+            console.error('Erreur dans la réponse de l\'API :', response.status);
+            return;
+        }
+
+        const voyages = await response.json();
+        console.log('Résultats renvoyés par l\'API :', voyages);
+
+        afficherVoyages(voyages);
+    } catch (error) {
+        console.error('Erreur lors de la requête fetch :', error);
+    }
 }
 
 // Fonction pour afficher les voyages dans le DOM
 function afficherVoyages(voyages) {
     const voyagesListe = document.getElementById('voyagesListe');
-    voyagesListe.innerHTML = '';  // Vider la liste avant d'afficher de nouveaux éléments
+    voyagesListe.innerHTML = ''; 
 
     voyages.forEach(voyage => {
         const listItem = document.createElement('li');
         
-        // Formatage des dates (si nécessaire)
         const dateDepart = new Date(voyage.dateDepart).toLocaleDateString("fr-FR");
         const dateRetour = new Date(voyage.dateRetour).toLocaleDateString("fr-FR");
 
