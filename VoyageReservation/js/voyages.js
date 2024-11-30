@@ -34,10 +34,7 @@ async function displayVoyages(voyages) {
         const imageElement = document.createElement("img");
         imageElement.alt = `Image de ${voyage.destination}`;
 
-        const destinationImagePath = voyage.destination.toLowerCase().replace(/ /g, '_');
-        const imagePath = `http://localhost:5074/images/voyages/${destinationImagePath}.jpg`;
-
-        imageElement.src = voyage.imagePath || imagePath;
+        imageElement.src = `http://localhost:5074${voyage.imagePath}`;
 
         voyageElement.appendChild(destinationElement);
         voyageElement.appendChild(imageElement);
