@@ -28,21 +28,31 @@ async function afficherReservations() {
                 const listItem = document.createElement('li');
                 listItem.textContent = `Réservation pour ${reservation.voyageNom} le ${reformaterDate(reservation.dateReservation)}`;
 
+                // Création d'un conteneur pour les boutons
+                const buttonContainer = document.createElement('div');
+                buttonContainer.classList.add('button-container');
+
                 // Création du bouton "En savoir plus"
                 const enSavoirPlusButton = document.createElement('button');
-                enSavoirPlusButton.textContent = "En savoir plus";
+                enSavoirPlusButton.classList.add('button1');
+                enSavoirPlusButton.textContent = "Détails";
                 enSavoirPlusButton.onclick = () => {
                     console.log("ID du voyage : ", reservation.voyageId); // Vérification de l'ID
                     window.location.href = `/billet.html?voyageId=${reservation.voyageId}`;
                 };
                 
-                listItem.appendChild(enSavoirPlusButton);
-
                 // Création du bouton "Annuler"
                 const annulerButton = document.createElement('button');
+                annulerButton.classList.add('button2');
                 annulerButton.textContent = "Annuler";
                 annulerButton.onclick = () => annulerReservation(reservation.id); // Passer correctement l'ID
-                listItem.appendChild(annulerButton);
+
+                // Ajout des boutons au conteneur
+                buttonContainer.appendChild(enSavoirPlusButton);
+                buttonContainer.appendChild(annulerButton);
+
+                // Ajout du conteneur des boutons à l'élément de liste
+                listItem.appendChild(buttonContainer);
 
                 reservationsListe.appendChild(listItem);
             });
@@ -54,6 +64,8 @@ async function afficherReservations() {
         alert('Une erreur est survenue.');
     }
 }
+
+
 
 
 async function annulerReservation(reservationId) {
