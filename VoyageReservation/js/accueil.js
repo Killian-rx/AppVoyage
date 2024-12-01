@@ -43,9 +43,6 @@ function afficherVoyages(voyages) {
         listItem.innerHTML = `
             <a href="billet.html?voyageId=${voyage.voyageId}">
                 <h3>${voyage.destination}</h3>
-                <p><strong>Date de départ :</strong> ${dateDepart}</p>
-                <p><strong>Date de retour :</strong> ${dateRetour}</p>
-                <p><strong>Prix :</strong> ${voyage.prix.toFixed(2)} €</p>
             </a>
         `;
 

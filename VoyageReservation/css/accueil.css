@@ -137,6 +137,7 @@ footer {
     color: white;
     border-radius: 4px;
     overflow-y: auto;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 #voyagesListe li {
