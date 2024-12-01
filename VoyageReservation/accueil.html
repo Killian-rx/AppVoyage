@@ -20,13 +20,12 @@
 
     <h1>Choisissez votre prochaine destination.</h1>
 
+    <div class="overlay" id="overlay"></div>
 
     <i class='bx bx-search'></i>
-    <input type="text" id="rechercheVoyage" placeholder="Par exemple : Helsinki" data-placeholder="Par exemple : Madrid">
-
+    <input type="text" id="rechercheVoyage" onfocus="applyBlackFilter()" onblur="removeBlackFilter()" placeholder="Par exemple : Helsinki" data-placeholder="Par exemple : Madrid">
 
     <ul id="voyagesListe">
-        <!-- Les voyages seront affichés ici -->
     </ul>
 
     <script src="/js/accueil.js"></script>

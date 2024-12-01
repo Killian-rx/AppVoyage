@@ -6,6 +6,17 @@ body{
     font-family: 'Nunito';
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);  /* Initialement transparent */
+    transition: background-color 0.3s ease;
+    pointer-events: none;  /* Permet d'interagir avec les autres éléments sous cet overlay */
+}
+
 nav {
     text-align: center;
     align-items: center;
@@ -46,10 +57,11 @@ h1 {
     left: 31.5%;
     top: 48.5%;
     font-size: 3.5vh;
-    z-index: 1;
+    z-index: 2;
 }
 
 #rechercheVoyage {
+    z-index: 1;
     width: 35vw;
     height: 4vh;
     position: absolute;
@@ -123,46 +135,41 @@ footer {
 }
 
 
-
 /* Suggestion de la barre de recherche */
 #voyagesListe {
     position: absolute;
-    top: calc(50% + 5vh);
-    left: 50%;
+    top: 53%;
+    left: 49%;
     transform: translateX(-50%);
-    width: 35vw;
-    z-index: 1000;
-    padding: 10px;
+    width: 36vw;
     max-height: 300px;
     color: white;
-    border-radius: 4px;
     overflow-y: auto;
-    background: rgba(0, 0, 0, 0.8);
 }
 
 #voyagesListe li {
     list-style: none;
-    padding: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 3px;
+    padding-left: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+}
+
+#voyagesListe li:hover {
+    background: rgba(255, 255, 255, 0.5);
 }
 
 #voyagesListe li:last-child {
     border-bottom: none;
 }
 
+#voyagesListe li a h3,
 #voyagesListe li a {
     text-decoration: none;
-    color: white;
-    display: block;
+    color: black;
 }
-
-#voyagesListe li a h3,
-#voyagesListe li a p {
-    margin: 5px 0;
-    color: white;
-}
-
 
 
 

@@ -74,15 +74,12 @@ function toggleConnexionLink() {
     }
 }
 
-document.getElementById('rechercheVoyage').addEventListener('focus', function () {
-    const input = this;
+document.addEventListener('DOMContentLoaded', function () {
+    const input = document.getElementById('rechercheVoyage');
     const placeholderText = input.getAttribute('data-placeholder');
     let currentIndex = 0;
 
-    // Efface le placeholder pour débuter l'animation
-    input.setAttribute('placeholder', '');
-
-    // Fonction pour ajouter un caractère à la fois
+    // Fonction pour ajouter un caractère à la fois au placeholder
     const typePlaceholder = () => {
         if (currentIndex < placeholderText.length) {
             input.setAttribute(
@@ -94,20 +91,25 @@ document.getElementById('rechercheVoyage').addEventListener('focus', function ()
         }
     };
 
-    typePlaceholder(); // Lance l'animation
+    // Efface le placeholder initialement pour commencer l'animation
+    input.setAttribute('placeholder', '');
+    typePlaceholder(); // Lance l'animation du placeholder
+
+    // L'événement blur pour rétablir le placeholder complet
+    input.addEventListener('blur', function () {
+        input.setAttribute('placeholder', placeholderText);
+    });
 });
+
+
 
 document.getElementById('rechercheVoyage').addEventListener('blur', function () {
     const input = this;
     const placeholderText = input.getAttribute('data-placeholder');
 
-    // Rétablit le placeholder complet quand on sort du focus
+    // Rétablit le placeholder complet et vide la barre de saisie
     input.setAttribute('placeholder', placeholderText);
-});
-
-// Met le focus sur l'input de recherche quand la page est chargée
-window.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('rechercheVoyage').focus();
+    input.value = ''; // Vide la valeur de l'input
 });
 
 
@@ -118,3 +120,13 @@ document.addEventListener('DOMContentLoaded', toggleConnexionLink);
 // Event listener pour rechercher les voyages à chaque frappe de l'utilisateur
 document.getElementById('rechercheVoyage').addEventListener('input', rechercherVoyages);
 
+
+function applyBlackFilter() {
+    // Applique un filtre noir semi-transparent sur l'image de fond
+    document.getElementById('overlay').style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+}
+
+function removeBlackFilter() {
+    // Enlève le filtre noir lorsque l'élément perd le focus
+    document.getElementById('overlay').style.backgroundColor = 'rgba(0, 0, 0, 0)';
+}
