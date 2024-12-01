@@ -92,5 +92,27 @@ async function annulerReservation(reservationId) {
     }
 }
 
+// Fonction pour afficher ou cacher le bouton de connexion/déconnexion en fonction de l'état de l'utilisateur
+function toggleConnexionLink() {
+    const userId = localStorage.getItem('utilisateurId');
+    const loginLink = document.getElementById('login-link');
+
+    if (userId) {
+        loginLink.textContent = 'Déconnexion';
+        loginLink.href = '#';
+        loginLink.onclick = function() {
+            localStorage.removeItem('utilisateurId');  // Supprimer l'ID utilisateur
+            alert('Vous êtes déconnecté');
+            toggleConnexionLink();  // Mettre à jour l'affichage
+        };
+    } else {
+        loginLink.textContent = 'Connexion';
+        loginLink.href = 'connexion.html';  // Redirige vers la page de connexion
+    }
+}
+
+// Appeler cette fonction au chargement de la page pour afficher le bon lien
+document.addEventListener('DOMContentLoaded', toggleConnexionLink);
+
 // Charger les réservations après le chargement de la page
 window.onload = afficherReservations;
