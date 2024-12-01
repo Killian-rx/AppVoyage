@@ -79,7 +79,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const placeholderText = input.getAttribute('data-placeholder');
     let currentIndex = 0;
 
-    // Fonction pour ajouter un caractère à la fois au placeholder
     const typePlaceholder = () => {
         if (currentIndex < placeholderText.length) {
             input.setAttribute(
@@ -87,19 +86,30 @@ document.addEventListener('DOMContentLoaded', function () {
                 input.getAttribute('placeholder') + placeholderText[currentIndex]
             );
             currentIndex++;
-            setTimeout(typePlaceholder, 100); // Ajuste la vitesse ici
+            setTimeout(typePlaceholder, 100);
         }
     };
 
-    // Efface le placeholder initialement pour commencer l'animation
     input.setAttribute('placeholder', '');
-    typePlaceholder(); // Lance l'animation du placeholder
+    typePlaceholder();
 
-    // L'événement blur pour rétablir le placeholder complet
     input.addEventListener('blur', function () {
         input.setAttribute('placeholder', placeholderText);
     });
+
+    document.addEventListener('click', function(event) {
+        const voyagesListe = document.getElementById('voyagesListe');
+        const overlay = document.getElementById('overlay');
+
+        if (!input.contains(event.target) && !voyagesListe.contains(event.target)) {
+            voyagesListe.innerHTML = '';
+            overlay.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+        }
+    });
+
+    toggleConnexionLink();
 });
+
 
 
 
