@@ -1,5 +1,5 @@
 body{
-    background-image: url(/images/pexels-ahmetyuksek-29564375.jpg);
+    background-image: url(/images/pexels-raulling-29194141.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -73,12 +73,12 @@ nav a:hover {
     width: 80%;
     max-width: 900px;
     height: 500px;
-    background-color: #f8f9fa;
+    background-color: rgba(255, 255, 255, 0.7);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .form-container {
@@ -108,9 +108,62 @@ nav a:hover {
     height: 100%;
     background: radial-gradient(circle at 10% 20%, rgb(255, 131, 61) 0%, rgb(249, 183, 23) 90%);
     z-index: 2; /* Assurez-vous que l'overlay soit au-dessus des formulaires */
-    transition: right 0.3s ease; /* Transition sur la propriété left */
-    border-radius: 10px;
+    transition: right 0.5s ease; /* Transition sur la propriété left */
+    border-radius: 20px;
+    text-align: center;
 }
+
+.img-container1{
+    margin-top: 15vh;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 3vw;
+}
+
+#imgco1{
+    width: 50%;
+    margin-top: 5.5vh;
+    transform: scale(4);
+
+}
+
+.img-container2{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1;
+    top: 33%;
+    left: 33%;
+}
+
+#imgco2{
+    width: 50%;
+    margin-top: 5.5vh;
+    transform: scale(4);
+
+}
+
+.img-container3{
+    position: absolute;
+    right: 3vw;
+    top: 36%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#imgco3{
+    width: 50%;
+    margin-top: 5.4vh;
+    transform: scale(4);
+
+}
+
 
 /* Bouton et autres styles comme précédemment */
 button {
@@ -254,4 +307,13 @@ p a {
 
 p a:hover {
     text-decoration: underline;
+}
+
+#message {
+    position: absolute;
+    left: 3vw;
+}
+
+#Message {
+    position: absolute;
 }
