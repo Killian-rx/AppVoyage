@@ -12,6 +12,11 @@ async function rechercherVoyages() {
 
     console.log('Requête utilisateur normalisée :', searchQuery);
 
+    if (!searchQuery.trim()) {
+        afficherVoyages([]);
+        return;
+    }
+
     try {
         const response = await fetch(`http://localhost:5074/api/voyages/recherche?query=${searchQuery}`);
         
